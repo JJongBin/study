@@ -1,6 +1,16 @@
 body{
-
+    background-color: rgb(230, 230, 230);
 }
+#time{
+    font-size: 50px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+
 
 .container{
     width: 100%;
@@ -9,10 +19,43 @@ body{
 .container .inner{
     position: relative;
     width: 1000px;
+    /* height: 100%; */
     margin: 0 auto;
-    background-color: antiquewhite;
+    background-color: #fff;
+    overflow: auto;
 }
 .container .inner .calender{
+    width: auto;
+    height: 700px;
+    /* padding: 30px; */
+    box-sizing: border-box;
+    margin: 30px;
+    background-color: rgb(250, 250, 250);
+    
+}
+.container .inner .calender .calender-month{
     width: 100%;
-    height: 1000px;
+}
+.container .inner .calender .calender-month .control-month{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    font-size: 50px;
+    background-color: rgb(240, 240, 240);
+}
+.container .inner .calender .calender-month .control-month .month{
+    width: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+.container .inner .calender .calender-month .control-month .material-icons{
+    font-size: 50px !important;
+    cursor: pointer;
+}
+.container .inner .calender .calender-month .control-month .material-icons.prev{
+    margin: auto 0;
+}
+.container .inner .calender .calender-month .control-month .material-icons.next{
+    margin: auto 0;
 }

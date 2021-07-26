@@ -7,14 +7,24 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
     <script defer src="./main.js"></script>
 
 </head>
 <body>
     <div class="container">
         <div class="inner">
+
+            <div id="time"></div>
+
             <div class="calender">
                 <div class="calender-month">
+                    <div class="control-month">
+                        <span class="material-icons prev">chevron_left</span>
+                        <span class="month"></span>
+                        <span class="material-icons next">chevron_right</span>
+                    </div>
                     <div class="calender-head"></div>
                     <div class="calender-main">
                         <div class="date"></div>
