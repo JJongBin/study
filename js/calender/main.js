@@ -44,7 +44,7 @@ setInterval(getMonthItem, 3600000);     // 하루 기준으로 갱신
 
 // 일자 띄우기
 function getDateItem() {
-    console.log(month)
+    // console.log(month)
     const calenderMonth = monthItem.textContent
     const prevLast = new Date(year, month-1, 0);    // 지난달 
     const thisLast = new Date(year, month, 0);      // 이번달
@@ -93,7 +93,7 @@ function getDateItem() {
     // foreach((callback, index, array) => {내용})          화살표함수도 가능
     
     prevDates.forEach(function (date, i) {
-        prevDates[i] = `<div class="date">${date}</div>`;
+        prevDates[i] = `<div class="date other">${date}</div>`;
     })
     thisDates.forEach(function (date, i) {
         if (day === date && nowMonth === calenderMonth){    // 일자가 같고 오늘의 년월이 화면의 년월과 같을때
@@ -103,7 +103,7 @@ function getDateItem() {
         }
     })
     nextDates.forEach(function (date, i) {
-        nextDates[i] = `<div class="date">${date}</div>`;
+        nextDates[i] = `<div class="date other">${date}</div>`;
     })
     const dates = prevDates.concat(thisDates, nextDates);       // concat으로 배열을 합침
     
@@ -123,6 +123,5 @@ const nextMonth = document.querySelector(".container .inner .calender .calender-
 
 prevMonth.addEventListener("click", function() {
     month -= 1
-    console.log(month)
     getDateItem(month)
 })

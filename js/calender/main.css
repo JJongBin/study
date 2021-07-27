@@ -114,3 +114,6 @@ body{
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
+.container .inner .calender .calender-month .calender-main .dates .date.other{
+    opacity: 0.2;
+}
