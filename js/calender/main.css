@@ -1,5 +1,7 @@
 body{
     background-color: rgb(230, 230, 230);
+    height: 100%;
+    width: 100%;
 }
 #time{
     font-size: 70px;
@@ -14,24 +16,24 @@ body{
 
 .container{
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 .container .inner{
     position: relative;
     width: 1000px;
-    /* height: 100%; */
+    height: 100%;
     margin: 0 auto;
     background-color: #fff;
     overflow: auto;
 }
 .container .inner .calender{
     width: auto;
-    height: 700px;
+    /* height: 700px; */
     border-radius: 30px;
     /* padding: 30px; */
     box-sizing: border-box;
     margin: 30px;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(245, 245, 245);
     
 }
 .container .inner .calender .calender-month{
@@ -44,8 +46,8 @@ body{
     width: 100%;
     height: 80px;
     font-size: 50px;
-    font-weight: 600;
-    background-color: rgb(240, 240, 240);
+    font-weight: 500;
+    background-color: rgb(235, 235, 235);
 }
 .container .inner .calender .calender-month .control-month .month{
     width: 100%;
@@ -72,11 +74,11 @@ body{
     text-align: center;
     padding: 10px;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
     /* border: 1px solid rgb(255, 255, 255); */
 }
 .container .inner .calender .calender-month .calender-main{
-    margin-top: 20px;
+    padding: 20px 0;
 }
 .container .inner .calender .calender-month .calender-main .dates{
     display: grid;
@@ -88,4 +90,27 @@ body{
     text-align: center;
     line-height: 100px;
     font-weight: 400;
+    z-index: 10;
+}
+/* .container .inner .calender .calender-month .calender-main .dates .date.today{
+    text-decoration: underline red;
+    text-underline-position:under
+} */
+.container .inner .calender .calender-month .calender-main .dates .date.today {
+    position: relative;
+    color: #FFFFFF;
+}
+  
+.container .inner .calender .calender-month .calender-main .dates .date.today::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
