@@ -44,6 +44,7 @@ body{
     width: 100%;
     height: 80px;
     font-size: 50px;
+    font-weight: 600;
     background-color: rgb(240, 240, 240);
 }
 .container .inner .calender .calender-month .control-month .month{
@@ -63,12 +64,28 @@ body{
 }
 
 .container .inner .calender .calender-month .calender-head{
+    margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .container .inner .calender .calender-month .calender-head .date-week{
     text-align: center;
     padding: 10px;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 600;
     /* border: 1px solid rgb(255, 255, 255); */
+}
+.container .inner .calender .calender-month .calender-main{
+    margin-top: 20px;
+}
+.container .inner .calender .calender-month .calender-main .dates{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+.container .inner .calender .calender-month .calender-main .dates .date{
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: 400;
 }
