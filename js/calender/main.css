@@ -2,12 +2,12 @@ body{
     background-color: rgb(230, 230, 230);
 }
 #time{
-    font-size: 50px;
+    font-size: 70px;
     width: 100%;
-    height: 100px;
+    height: 150px;
     text-align: center;
-    line-height: 100px;
-    
+    line-height: 150px;
+    font-weight: 700;
 }
 
 
@@ -27,6 +27,7 @@ body{
 .container .inner .calender{
     width: auto;
     height: 700px;
+    border-radius: 30px;
     /* padding: 30px; */
     box-sizing: border-box;
     margin: 30px;
@@ -37,6 +38,7 @@ body{
     width: 100%;
 }
 .container .inner .calender .calender-month .control-month{
+    border-radius: 30px 30px 0 0;
     display: flex;
     position: relative;
     width: 100%;
@@ -58,4 +60,15 @@ body{
 }
 .container .inner .calender .calender-month .control-month .material-icons.next{
     margin: auto 0;
+}
+
+.container .inner .calender .calender-month .calender-head{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.container .inner .calender .calender-month .calender-head .date-week{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    /* border: 1px solid rgb(255, 255, 255); */
 }
