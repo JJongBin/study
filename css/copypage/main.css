@@ -433,4 +433,78 @@ body{
 
 
 
+/* BUTTON - 6 */
+#button .contents-box .content .item .line{
+    position: relative;
+}
+
+#button .contents-box .content .item .line .btn-6{
+    border: 3px solid #ccc;
+    color: #0066ff;
+    font-weight: 700;
+    transition: background-color .3s;
+    transition: all .2s;
+    transition-delay: .45s;
+}
+
+#button .contents-box .content .item .line::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    background-color: #0066ff;
+    height: 0;
+    transition: all .1s;
+}
+#button .contents-box .content .item .line::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #0066ff;
+    height: 4px;
+    transition: all .1s;
+    transition-delay: .1s;
+}
+#button .contents-box .content .item .line .btn-6:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4px;
+    background-color: #0066ff;
+    height: 0;
+    transition: all .1s;
+    transition-delay: .2s;
+}
+#button .contents-box .content .item .line .btn-6:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    background-color: #0066ff;
+    height: 4px;
+    transition: all .1s;
+    transition-delay: .3s;
+}
+
+#button .contents-box .content .item .line:hover::before{
+    height: 100%;
+}
+#button .contents-box .content .item .line:hover::after{
+    width: 100%;
+}
+#button .contents-box .content .item .line .btn-6:hover::before{
+    height: 100%;
+}
+#button .contents-box .content .item .line .btn-6:hover::after{
+    width: 100%;
+}
+#button .contents-box .content .item .line .btn-6:hover{
+    background-color: #0066ff;
+    color: #fff;
+}
 
