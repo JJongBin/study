@@ -569,3 +569,50 @@ body{
         background-position: left 1500px bottom 0px;
     }
 }
+
+#item-btn-8{
+    position: relative;
+}
+#button .contents-box .content .item .blur{
+    
+}
+#button .contents-box .content .item .blur .btn-8{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+}
+#button .contents-box .content .item .blur .btn-8:first-child{
+    z-index: 10;
+    margin-left: -100px;
+    margin-top: -40px;
+    background-color: transparent;
+    border: 3px solid #0066ff;
+    color: #0066ff;
+    font-weight: 700;
+    transition: all .4s;
+    transition: color .3s;
+    /* transition: background-color .3s; */
+    transition: box-shadow .9s;
+}
+#button .contents-box .content .item .blur .btn-8:last-child{
+    z-index: 9;
+    width: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    background-color: #0066ff;
+    transition: all .3s;
+}
+#button .contents-box .content .item .blur:hover .btn-8:first-child{
+    color: #fff;
+    /* background-color: #0066ff; */
+    box-shadow: #0066ff 0 0 40px ;
+}
+#button .contents-box .content .item .blur:hover .btn-8:last-child{
+    opacity: 1;
+    height: 80px;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -40px;
+}
