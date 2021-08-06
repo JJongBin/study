@@ -570,6 +570,8 @@ body{
     }
 }
 
+
+/* BUTTON - 8 */
 #item-btn-8{
     position: relative;
 }
@@ -615,4 +617,64 @@ body{
     width: 200px;
     margin-left: -100px;
     margin-top: -40px;
+}
+
+/* BUTTON - 9 */
+#button .contents-box .content .item .zigzag{
+    position: relative;
+    height: 80px;
+    width: 200px;
+    overflow: hidden;
+}
+#button .contents-box .content .item .zigzag .btn-9{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -40px;
+    background-color: transparent;
+    border: 3px solid #0066ff;
+    color: #0066ff;
+    font-weight: 700;
+    z-index: 10;
+    transition: color .7s;
+}
+#button .contents-box .content .item .zigzag .block{
+    position: absolute;
+    
+    padding: 0;
+    background-color: #0066ff;
+    width: 20%;
+    height: 80px;
+    z-index: 9;
+    transition: all .5s;
+}
+#button .contents-box .content .item .zigzag:hover .btn-9{
+    color: #fff;
+}
+#button .contents-box .content .item .zigzag .block:nth-child(2){
+    border-radius: 5px 0 0 5px;
+    top: -80px;
+    left: 0;
+}
+#button .contents-box .content .item .zigzag .block:nth-child(3){
+    top: 80px;
+    left: 40px;
+}
+#button .contents-box .content .item .zigzag .block:nth-child(4){
+    top: -80px;
+    left: 80px;
+}
+#button .contents-box .content .item .zigzag .block:nth-child(5){
+    top: 80px;
+    left: 120px;
+}
+#button .contents-box .content .item .zigzag .block:nth-child(6){
+    border-radius: 0 5px 5px 0;
+    top: -80px;
+    left: 160px;
+}
+#button .contents-box .content .item .zigzag:hover .block{
+    top: 0;
+
 }
