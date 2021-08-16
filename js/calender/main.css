@@ -4,6 +4,7 @@ body{
     width: 100%;
 }
 #time{
+    display: none;
     font-size: 70px;
     width: 100%;
     height: 150px;
@@ -11,6 +12,78 @@ body{
     line-height: 150px;
     font-weight: 700;
 }
+.show{
+    animation: show 1.5s;
+}
+@keyframes show{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+#go-today{
+    position: absolute;
+    bottom: -150px;
+    width: 200px;
+    height: 80px;
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    border-radius: 30px;
+    left: 50%;
+    margin-left: -100px;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+#go-today:hover{
+    background-color: rgb(150, 150, 150);
+    color: #fff;
+}
+
+#go-thisdaybox{
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background-color: rgb(230, 230, 230);
+    bottom: -300px;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#go-thisdaybox form{
+}
+#go-thisdaybox form input{
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: none;
+}
+#go-thisdaybox form input:first-child{
+    width: 300px;
+    /* font-size: 30px; */
+    box-sizing: border-box;
+    outline:none;
+}
+#go-thisdaybox form input:last-child{
+    /* font-size: 30px; */
+    font-weight: 100;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0 15px;
+    transition: background-color .5s;
+}
+#go-thisdaybox form input:last-child:hover{
+    background-color:  rgb(150, 150, 150);
+    color: #fff;
+}
+
+
 
 
 
@@ -28,12 +101,14 @@ body{
 }
 .container .inner .calender{
     width: auto;
+    position: relative;
     /* height: 700px; */
     border-radius: 30px;
     /* padding: 30px; */
     box-sizing: border-box;
     margin: 30px;
     background-color: rgb(245, 245, 245);
+    
     
 }
 .container .inner .calender .calender-month{
@@ -60,15 +135,28 @@ body{
 }
 .container .inner .calender .calender-month .control-month .material-icons.prev{
     margin: auto 0;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
 }
 .container .inner .calender .calender-month .control-month .material-icons.next{
     margin: auto 0;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
+
 }
 
 .container .inner .calender .calender-month .calender-head{
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .container .inner .calender .calender-month .calender-head .date-week{
     text-align: center;
@@ -79,6 +167,8 @@ body{
 }
 .container .inner .calender .calender-month .calender-main{
     padding: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .container .inner .calender .calender-month .calender-main .dates{
     display: grid;
@@ -91,6 +181,12 @@ body{
     line-height: 100px;
     font-weight: 400;
     z-index: 10;
+    cursor: pointer;
+    transition: color 1s;
+}
+.container .inner .calender .calender-month .calender-main .dates .date:hover{
+    background-color:  rgb(235, 235, 235);
+    border-radius: 30px;
 }
 /* .container .inner .calender .calender-month .calender-main .dates .date.today{
     text-decoration: underline red;
@@ -114,6 +210,6 @@ body{
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
-.container .inner .calender .calender-month .calender-main .dates .date.other{
+.container .inner .calender .calender-month .calender-main .dates .date.other p{
     opacity: 0.2;
 }
